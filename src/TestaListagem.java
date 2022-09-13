@@ -1,4 +1,5 @@
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -9,9 +10,9 @@ public class TestaListagem {
 		CriaConexao criarConexao = new CriaConexao();
 		Connection connection = criarConexao.recuperarConecao();
 		
-		Statement stm = connection.createStatement();
-		stm.execute("SELECT ID,NOME,DESCRICAO FROM PRODUTO");
-
+		PreparedStatement stm = connection.prepareStatement("SELECT ID,NOME,DESCRICAO FROM PRODUTO");
+		stm.execute();
+		
 		
 		ResultSet resultset = stm.getResultSet();  //aqui estou pegando o resultado da consulta do stm.execute
 		

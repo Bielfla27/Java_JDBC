@@ -23,6 +23,7 @@ public class TestaInsercaoComParametro {
 		//PreparedStatement ele deixa o código mais seguro e trás a responsabilidade da montagem da query para ele
 		// Uma das vantagens em se utilizar o PreparedStatement é que o mesmo evita o SQL injection.
 		//O PreparedStatement mantém a consulta compilada no banco de dados, para o usuário que necessitar realizar a mesma consulta, diversas vezes, com parâmetros diferentes.
+		
 		ResultSet rst = stm.getGeneratedKeys(); 
 		while(rst.next()) {
 			Integer id = rst.getInt(1);
