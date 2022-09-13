@@ -22,6 +22,8 @@ public class TesteInsercao {
 			System.out.println("O id doi: " + id);
 		}
 		
+		connection.close();
+
 		
 	}
 
