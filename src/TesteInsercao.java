@@ -14,6 +14,8 @@ public class TesteInsercao {
 				, Statement.RETURN_GENERATED_KEYS);
 				  //Retorna a ultimo id criado	
 		
+		//Um dos problemas de se utilizar o Statement é que, quando o usuário insere uma string em um formulário, utilizando um apóstrofo, ele não diferencia na hora de concatenar na query, causando uma SQLException
+		
 		ResultSet rst = stm.getGeneratedKeys(); //pegando id
 		while(rst.next()) {
 			Integer id = rst.getInt(1);
