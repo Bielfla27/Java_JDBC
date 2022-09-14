@@ -14,6 +14,7 @@ public class CriaConexao {
 		comboPooledDataSource.setJdbcUrl("jdbc:mysql://localhost/loja_virtual?useTimezone=true&serverTimezone=UTC");
 		comboPooledDataSource.setUser("root");
 		comboPooledDataSource.setPassword("gabriel");
+		comboPooledDataSource.setMaxPoolSize(15);
 		this.dataSource = comboPooledDataSource;
 	}
 	
