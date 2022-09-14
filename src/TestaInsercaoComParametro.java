@@ -10,7 +10,7 @@ public class TestaInsercaoComParametro {
 		
 		
 		CriaConexao criarConexao = new CriaConexao();
-			try(Connection connection = criarConexao.recuperarConecao()){
+			try(Connection connection = criarConexao.recuperarConexao()){
 			connection.setAutoCommit(false); // com isso eu estou assumindo o controle e dizendo que só vou commita quando eu quiser
 			
 			//PreparedStatement ele deixa o código mais seguro e trás a responsabilidade da montagem da query para ele

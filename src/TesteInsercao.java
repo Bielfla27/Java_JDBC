@@ -7,7 +7,7 @@ public class TesteInsercao {
 
 	public static void main(String[] args) throws SQLException {
 		CriaConexao criarConexao = new CriaConexao();
-		Connection connection = criarConexao.recuperarConecao();
+		Connection connection = criarConexao.recuperarConexao();
 		
 		Statement stm = connection.createStatement();
 		stm.execute("INSERT INTO PRODUTO (nome, descricao) VALUES ('Teclado', 'Teclado sem fio')"
